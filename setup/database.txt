@@ -1,0 +1,39 @@
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+CREATE DATABASE IF NOT EXISTS `nullhyd_humla` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+
+USE `nullhyd_humla`;
+
+CREATE TABLE `user` (
+  `id` int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(100) NOT NULL,
+  `last_name` varchar(30) DEFAULT NULL,
+  `email_address` varchar(150) NOT NULL,
+  `password` varchar(150) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+INSERT INTO user(first_name, last_name, email_address, password) VALUES('NullHyd', 'Moderators', 'moderators@nullhyd.org', 'I_AM_NO_USE');
+
+CREATE TABLE `customer` (
+  `id` int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `email_address` varchar(150) NOT NULL,
+  `location` varchar(150) DEFAULT NULL,
+  `contact_number` varchar(150) DEFAULT NULL,
+  `since` varchar(5) DEFAULT NULL,
+  `GST_NO` varchar(20) DEFAULT NULL,
+  `secret` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+INSERT INTO customer(name, email_address, location, contact_number, since, GST_NO) VALUES('Bharat Auto Works Ltd', 'contact@example.com', 'Hyderabad', '1337', '1990', '0123456789');
+INSERT INTO customer(name, email_address, location, contact_number, since, GST_NO) VALUES('India Mountain Engineering Ltd', 'contact2@example.com', 'Hyderabad', '007', '1945', '1122334455');
+INSERT INTO customer(name, email_address, location, contact_number, since, GST_NO) VALUES('ISCOPO India Pvt Ltd', 'contact3@example.com', 'Bangalore', '1337', '2005', '8642086420');
+INSERT INTO customer(name, email_address, location, contact_number, since, GST_NO) VALUES('Aayushman Healthcare LLC', 'contact4@example.com', 'Chennai', '12345', '1990', '9753197531');
+INSERT INTO customer(name, email_address, location, contact_number, since, GST_NO, secret) VALUES('NullHyd', 'contact5@example.com', 'Hyderabad', '1337', '1337', '133713371337', 'NullHydRockz!');
+INSERT INTO customer(name, email_address, location, contact_number, since, GST_NO) VALUES('Charmminar Food Services Pvt Ltd', 'contact6@example.com', 'Mumbai', '0000', '2025', '9876543210');
+
