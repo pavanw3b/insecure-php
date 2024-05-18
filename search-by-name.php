@@ -169,7 +169,7 @@ if(isset($_POST["customer_name"])) {
                         </div>
                         <?php
                         } else if (isset($result) && isset($_POST['customer_name'])) {
-                          echo "<div class=\"col-sm-12\">Your search found no result. Please try again with the full name of a customer. E.g.: Hyderabad Tech Engineering Services Limited.</div><br/>";
+                          echo "<div class=\"col-sm-12\">Your search found no result. Please try again with the full name of a customer. E.g.: NullHyd.</div><br/>";
                         }
                           
                    ?>                        
